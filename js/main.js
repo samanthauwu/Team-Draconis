@@ -53,7 +53,7 @@ $(document).ready(function() {
 
     // ── RECLUTAMIENTO ─────────────────────────
 
-    const reclutamientoAbierto = false;
+    const reclutamientoAbierto = true;
 
     if (reclutamientoAbierto) {
 
