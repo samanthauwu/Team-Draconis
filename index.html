@@ -54,6 +54,7 @@
         <a href="#inicio">INICIO</a>
         <a href="#equipo">EQUIPO</a>
         <a href="#trayectoria">TRAYECTORIA</a>
+        <!-- <a href="creator-program.html">CREADORES</a> -->
         <a href="#mis-torneos">TORNEOS</a>
         <a href="#reclutamiento">UNIRSE</a>
     </nav>
@@ -67,46 +68,36 @@
 </section>
 
 <div class="container" id="equipo">
-    <h2 class="section-title">Nuestro Roster</h2>
+    <h2 class="section-title">Team Draconis</h2>
 
     <!-- JUGADORES -->
-    <h3 class="sub-title">Roster Principal</h3>
-    <div class="grid">
-        <div class="card">
-            <img src="img/dontroi.png" alt="Player" class="player-img">
-            <h3>Dontroi</h3>
-            <p>MIDLANE</p>
-            <span class="pro-player">Titular</span>
+
+<div class="timeline-slider">
+
+    <button class="timeline-btn" id="prevRoster">
+        ❮
+    </button>
+
+    <div style="flex:1;">
+
+        <h3 class="sub-title" id="rosterTitle">
+            Roster Principal
+        </h3>
+
+        <div class="grid" id="rosterContainer">
+            <!-- JS -->
         </div>
 
-        <div class="card">
-            <img src="img/sam.png" alt="Player" class="player-img">
-            <h3>Samxaria</h3>
-            <p>JUNGLER</p>
-            <span>Titular</span>
-        </div>
-
-        <div class="card">
-            <img src="img/darvil.png" alt="Player" class="player-img">
-            <h3>Darvil</h3>
-            <p>TOPLANE</p>
-            <span>Titular</span>
-        </div>
-
-        <div class="card">
-            <img src="img/marched.png" alt="Player" class="player-img">
-            <h3>Marched</h3>
-            <p>ADC</p>
-            <span>Titular</span>
-        </div>
-
-        <div class="card">
-            <img src="img/kazami.png" alt="Player" class="player-img">
-            <h3>Kazami</h3>
-            <p>SUPPORT</p>
-            <span>Titular</span>
-        </div>
     </div>
+
+    <button class="timeline-btn" id="nextRoster">
+        ❯
+    </button>
+
+</div>
+
+<div class="timeline-dots" id="rosterDots"></div>
+
 
     <!-- STAFF -->
     <h3 class="sub-title" style="margin-top:60px;">Staff</h3>
@@ -189,6 +180,7 @@
         <a href="https://discord.gg/Rgj5SQPYKR" target="_blank" class="btn">INSCRIBIRSE EN DISCORD</a>
     </div>
 </div>
+
 
 <div class="container" id="reclutamiento">
     <h2 class="section-title">Reclutamiento</h2>

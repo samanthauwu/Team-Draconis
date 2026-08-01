@@ -721,3 +721,254 @@ nav a:hover {
 .event-box{
     max-width:100%;
 }
+
+/* =======================================================
+                CREATOR PROGRAM
+=======================================================*/
+
+.creator-hero{
+
+    padding:120px 20px 80px;
+
+    text-align:center;
+
+}
+
+.creator-hero h1{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+}
+
+.creator-hero p{
+
+    color:#bdbdbd;
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:18px;
+
+}
+
+
+.creator-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+
+.creator-card{
+
+    background:#111;
+
+    border:1px solid #242424;
+
+    border-radius:18px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.creator-card:hover{
+
+    border-color:var(--primary-magenta);
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 0 35px rgba(224,18,166,.25);
+
+}
+
+
+.creator-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:var(--primary-magenta);
+
+}
+
+
+.creator-avatar{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid var(--primary-magenta);
+
+    box-shadow:
+        0 0 25px rgba(224,18,166,.35);
+
+    margin-bottom:20px;
+
+}
+
+
+.creator-card h3{
+
+    margin:10px 0 25px;
+
+    font-size:28px;
+
+    color:#fff;
+
+}
+
+
+.creator-socials{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+
+.creator-socials a{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    background:#181818;
+
+    color:#999;
+
+    font-size:20px;
+
+    border:1px solid #2d2d2d;
+
+}
+
+
+.creator-socials a:hover{
+
+    background:var(--primary-magenta);
+
+    color:white;
+
+    transform:scale(1.12);
+
+    box-shadow:
+        0 0 18px rgba(224,18,166,.45);
+
+}
+
+
+/* CTA */
+
+.creator-join{
+
+    margin-top:120px;
+
+    background:#111;
+
+    border:1px solid rgba(224,18,166,.35);
+
+    border-radius:20px;
+
+    padding:70px 40px;
+
+    text-align:center;
+
+}
+
+
+.creator-join h2{
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+
+.creator-join p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#bdbdbd;
+
+    margin-bottom:35px;
+
+}
+
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+.creator-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.creator-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.creator-hero h1{
+
+font-size:38px;
+
+}
+
+.creator-join h2{
+
+font-size:30px;
+
+}
+
+}

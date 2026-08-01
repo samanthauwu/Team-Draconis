@@ -185,6 +185,180 @@ $(document).ready(function() {
 
     }
 
+    // ── ROSTERS ─────────────────────────
+
+const rosters = [
+
+{
+    title: "Draconis",
+
+    players: [
+
+        {
+            img: "img/darvil.png",
+            name: "Darvil",
+            role: "TOPLANE"
+        },
+
+        {
+            img: "img/sam.jpg",
+            name: "Samxaria",
+            role: "JUNGLER"
+        },
+
+        {
+            img: "img/paiisaa.png",
+            name: "Paiisaa",
+            role: "MIDLANE"
+        },
+
+        {
+            img: "img/marched.png",
+            name: "Marched",
+            role: "ADC"
+        },
+
+        {
+            img: "img/kippei.jpg",
+            name: "Kippei",
+            role: "SUPPORT"
+        }
+
+    ]
+
+},
+
+{
+    title: "Drakernor",
+
+    players: [
+
+        {
+            img: "img/baty.png",
+            name: "Baty",
+            role: "TOPLANE"
+        },
+
+        {
+            img: "img/seba.png",
+            name: "Seba",
+            role: "JUNGLER"
+        },
+
+        {
+            img: "img/kijo.png",
+            name: "Kijo",
+            role: "MIDLANE"
+        },
+
+        {
+            img: "img/sitzumi.png",
+            name: "Sitzumi",
+            role: "ADC"
+        },
+
+        {
+            img: "img/kippei.jpg",
+            name: "Kippei",
+            role: "SUPPORT"
+        }
+
+    ]
+
+}
+
+];
+
+let currentRoster = 0;
+
+function renderRoster(){
+
+    const roster = rosters[currentRoster];
+
+    $("#rosterTitle").text(roster.title);
+
+    let html = "";
+
+    roster.players.forEach(player => {
+
+        html += `
+
+        <div class="card">
+
+            <img src="${player.img}" class="player-img">
+
+            <h3>${player.name}</h3>
+
+            <p>${player.role}</p>
+
+            <span>Titular</span>
+
+        </div>
+
+        `;
+
+    });
+
+    $("#rosterContainer").html(html);
+
+    let dots = "";
+
+    rosters.forEach((_,index)=>{
+
+        dots += `
+        <div class="timeline-dot ${index===currentRoster ? "active" : ""}"
+             data-roster="${index}">
+        </div>
+        `;
+
+    });
+
+    $("#rosterDots").html(dots);
+
+}
+
+if($("#rosterContainer").length){
+
+    renderRoster();
+
+    $("#nextRoster").click(function(){
+
+        currentRoster++;
+
+        if(currentRoster>=rosters.length){
+
+            currentRoster=0;
+
+        }
+
+        renderRoster();
+
+    });
+
+    $("#prevRoster").click(function(){
+
+        currentRoster--;
+
+        if(currentRoster<0){
+
+            currentRoster=rosters.length-1;
+
+        }
+
+        renderRoster();
+
+    });
+
+    $(document).on("click","#rosterDots .timeline-dot",function(){
+
+        currentRoster = parseInt($(this).data("roster"));
+
+        renderRoster();
+
+    });
+
+}
+
     // ── SPONSOR BAR ─────────────────────────────
 
     const track = document.getElementById('sponsorTrack');
