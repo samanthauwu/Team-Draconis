@@ -219,8 +219,8 @@ const rosters = [
         },
 
         {
-            img: "img/kippei.jpg",
-            name: "Kippei",
+            img: "img/kotex.png",
+            name: "Kotex",
             role: "SUPPORT"
         }
 
