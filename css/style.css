@@ -1,10 +1,16 @@
+
 :root {
-    --primary-magenta: #e012a6;
-    --dark-magenta: #5c0b43;
-    --bg-black: #080808;
-    --card-bg: #121212;
-    --glow: 0 0 15px rgba(224, 18, 166, 0.4);
+    --primary-magenta: #F00887;
+    --dark-magenta: #790744;
+    --bg-black: #080408;
+    --card-bg: #170719;
+    --glow: 0 0 15px rgba(240, 8, 135, 0.45);
+
+    /* Nuevos colores de apoyo */
+    --neon-pink: #FF43B4;
+    --soft-pink: #F3A5D4;
 }
+
 
 * { box-sizing: border-box; transition: all 0.3s ease; }
 
@@ -27,10 +33,19 @@ body {
 body::before {
     content: "";
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at 50% 50%, #1a0518 0%, #080808 100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(
+        circle at 50% 40%,
+        #230A24 0%,
+        #100611 45%,
+        #080408 100%
+    );
+
     z-index: -1;
-    
 }
 
 /* ─── CENIZAS MÁGICAS DRACONIS ─── */
@@ -48,15 +63,16 @@ body::before {
     overflow: hidden;
 }
 
+
 .ash {
     position: absolute;
     border-radius: 50%;
 
-    background: #e012a6;
+    background: var(--primary-magenta);
 
     box-shadow:
-        0 0 10px #e012a6,
-        0 0 20px #e012a6;
+        0 0 8px var(--primary-magenta),
+        0 0 16px rgba(255, 67, 180, 0.4);
 
     opacity: 0;
 
@@ -64,6 +80,7 @@ body::before {
         floatAsh linear infinite,
         pulseAsh ease-in-out infinite;
 }
+
 
 
 @keyframes floatAsh {
